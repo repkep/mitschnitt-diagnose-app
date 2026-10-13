@@ -1,0 +1,51 @@
+{
+  "name": "Mitschnitt-Diagnose",
+  "short_name": "Mitschnitt",
+  "description": "Wireshark-Mitschnitte (pcap/pcapng) analysieren: Ursachen, Belege, Lösungen. Läuft vollständig im Browser.",
+  "lang": "de",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f2f4f3",
+  "theme_color": "#0d6b75",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "file_handlers": [
+    {
+      "action": "./",
+      "accept": {
+        "application/vnd.tcpdump.pcap": [
+          ".pcap",
+          ".cap",
+          ".dmp"
+        ],
+        "application/x-pcapng": [
+          ".pcapng",
+          ".ntar"
+        ],
+        "application/gzip": [
+          ".gz"
+        ]
+      }
+    }
+  ],
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  }
+}
